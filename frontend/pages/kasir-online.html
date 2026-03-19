@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasir Online - Coba Demo | kasiraulia Auliasoft</title>
+  <meta name="description"
+    content="Coba langsung demo aplikasi kasir online A-POS dan POS Enterprise dari Auliasoft. Solusi cerdas untuk bisnis retail, FnB, dan industri." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .online-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      padding: 9rem 5% 6rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .online-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .online-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .demo-section {
+      padding: 5rem 5%;
+      background: var(--bg-light);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .demo-card {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 30px 70px rgba(37, 99, 235, 0.15);
+    }
+
+    .card-header {
+      padding: 2.5rem;
+      background: #f8fafc;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .card-header .badge-tag {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary-color);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .card-header h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-header p.tagline {
+      color: #64748b;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .card-image {
+      background: white;
+      /* Changed to white for seamless integration */
+      height: 300px;
+      /* Increased height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0;
+      /* Remove padding to let image breathe */
+    }
+
+    .card-image img {
+      max-height: 120%;
+      /* Scale up slightly */
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .demo-card:hover .card-image img {
+      transform: scale(1.1);
+    }
+
+    .card-body {
+      padding: 2.5rem;
+      flex: 1;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 1rem;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .feature-list li i {
+      color: #10b981;
+      margin-top: 4px;
+    }
+
+    .credential-box {
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .credential-box h4 {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .acc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px dashed #cbd5e1;
+      gap: 10px;
+    }
+
+    .acc-label {
+      font-weight: 700;
+      color: #1e293b;
+      min-width: 70px;
+    }
+
+    .acc-item:last-child {
+      border-bottom: none;
+    }
+
+    .btn-group-hero {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .btn-secondary-white {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 1.1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary-white:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    .acc-info {
+      font-size: 0.9rem;
+    }
+
+    .acc-info strong {
+      color: #1e293b;
+    }
+
+    .btn-demo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--primary-color);
+      color: white;
+      padding: 1.2rem;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: all 0.3s;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-demo:hover {
+      background: #1d4ed8;
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+      gap: 18px;
+    }
+
+    .recommendation-section {
+      padding: 5rem 5%;
+      background: white;
+      text-align: center;
+    }
+
+    .rec-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 3.5rem;
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border: 1px solid #f1f5f9;
+    }
+
+    .rec-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .rec-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .rec-icon {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .online-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .acc-item {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .acc-label {
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+
+      .acc-info {
+        font-size: 0.85rem;
+        word-break: break-all;
+      }
+
+      .btn-group-hero {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 10%;
+      }
+
+      .rec-box {
+        padding: 2.5rem 1.5rem;
+        border-radius: 30px;
+      }
+
+      .rec-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .rec-item h4 {
+        font-size: 1.1rem;
+      }
+
+      .rec-item p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="../index.html" class="navbar-brand">
+          <span class="brand-text"><i class="fas fa-wallet"></i>kasiraulia</span>
+        </a>
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="nav-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html#home">Beranda</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produk <i class="fas fa-chevron-down"
+                style="font-size: 0.7rem;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="kasir-online.html" class="active">Kasir Online</a></li>
+              <li><a href="kasir-offline.html">Kasir Offline</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#harga">Harga</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="../index.html#kontak-form">Kontak</a></li>
+          <li><a href="https://youtube.com/playlist?list=PLBG7mgx1_MCgrCzLP2zKXvvru7jOfzmMR&si=draT3aPOZzr0tL31"
+              target="_blank">Tutorial</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="online-hero">
+    <div class="container">
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Interactive Demo</p>
+      <h1>Coba Demo Kasir Online</h1>
+      <p>Pilih aplikasi yang paling sesuai dengan kebutuhan bisnis Anda dan rasakan kemudahannya secara langsung.</p>
+      <div class="btn-group-hero">
+        <a href="https://wa.me/6281241945881" target="_blank" class="btn-demo"
+          style="background: #25d366; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </a>
+        <a href="#demo-cards" class="btn-secondary-white">Lihat Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Cards -->
+  <section class="demo-section" id="demo-cards">
+    <div class="demo-grid">
+
+      <!-- Card APOS -->
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="badge-tag">Hybrid Sync Edition</span>
+          <h2>A-POS</h2>
+          <p class="tagline">Offline Power, Online Access.</p>
+        </div>
+        <div class="card-image">
+          <img src="../img/angled-phone.png" alt="APOS Mobile Preview" />
+        </div>
+        <div class="card-body">
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> <span><strong>Teknologi Hybrid:</strong> Kontrol penuh di server
+                lokal dengan sinkronisasi akses mobile.</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Scan Kamera HP:</strong> Jualan & cek stok praktis
+                langsung dari kamera smartphone.</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Optimasi Kecepatan:</strong> Interface ringan untuk
+                operasional Sales & Gudang.</span></li>
+          </ul>
+
+          <div class="credential-box">
+            <h4>Akun Demo (Pilih Salah Satu):</h4>
+            <div class="acc-item">
+              <span class="acc-label">Kasir</span>
+              <span class="acc-info">User: <strong>coba.kasir</strong> | Pass: <strong>12345678</strong></span>
+            </div>
+            <div class="acc-item">
+              <span class="acc-label">Sales</span>
+              <span class="acc-info">User: <strong>coba.sales</strong> | Pass: <strong>12345678</strong></span>
+            </div>
+            <div class="acc-item">
+              <span class="acc-label">Gudang</span>
+              <span class="acc-info">User: <strong>coba.gudang</strong> | Pass: <strong>12345678</strong></span>
+            </div>
+          </div>
+
+          <a href="https://apos.auliasoft.com" target="_blank" class="btn-demo">
+            Coba Demo APOS <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card POS -->
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="badge-tag">Enterprise Cloud Edition</span>
+          <h2>POS Enterprise</h2>
+          <p class="tagline">Unlimited Control, Deep Insights.</p>
+        </div>
+        <div class="card-image">
+          <img src="../img/tablet-mockup.png" alt="POS Enterprise Preview" />
+        </div>
+        <div class="card-body">
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> <span><strong>Laporan Akuntansi:</strong> Neraca, Arus Kas, dan Laba
+                Rugi otomatis & lengkap.</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Manajemen Stok Pro:</strong> Multi-Gudang, Transfer
+                Stok, & Stok Opname detail.</span></li>
+            <li><i class="fas fa-check-circle"></i> <span><strong>Manajemen Produksi:</strong> Fitur Resep/BOM untuk
+                manufaktur & Restoran.</span></li>
+          </ul>
+
+          <div class="credential-box">
+            <h4>Akun Demo Admin:</h4>
+            <div class="acc-item">
+              <span class="acc-label">Admin</span>
+              <span class="acc-info">User: <strong>user</strong> | Pass: <strong>User123@</strong></span>
+            </div>
+            <div style="height: 104px;"></div> <!-- Spacer to match height -->
+          </div>
+
+          <a href="https://pos.auliasoft.com/login" target="_blank" class="btn-demo">
+            Coba Demo POS <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recommendation Section -->
+  <section class="recommendation-section">
+    <div class="container">
+      <h2 class="section-title">Masih Bingung Memilih?</h2>
+      <p style="margin-bottom: 3rem;">Berikut rekomendasi kami berdasarkan kebutuhan Anda:</p>
+
+      <div class="rec-box">
+        <div class="rec-item">
+          <div class="rec-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="rec-text">
+            <h4 style="font-weight: 800; color: #1e293b;">Butuh Kepraktisan & Scan Kamera?</h4>
+            <p style="font-size: 0.95rem;">Gunakan <strong>APOS</strong>. Sangat cocok untuk toko retail yang dinamis
+              dan mobilitas tinggi.</p>
+          </div>
+        </div>
+        <div class="rec-item">
+          <div class="rec-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="rec-text">
+            <h4 style="font-weight: 800; color: #1e293b;">Butuh Laporan Keuangan & Resep Detail?</h4>
+            <p style="font-size: 0.95rem;">Gunakan <strong>POS Enterprise</strong>. Ideal untuk Restoran, Grosir, dan
+              Bisnis Produksi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #0f172a; padding: 4rem 5%; color: white; text-align: center;">
+    <p>&copy; 2026 PT Mitra Aulia Indonesia. All Rights Reserved.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

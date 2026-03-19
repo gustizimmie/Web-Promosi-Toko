@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Kasir Offline - Trial 30 Hari | kasiraulia Auliasoft</title>
+  <meta name="description"
+    content="Download installer aplikasi kasir offline (Desktop) trial 30 hari. Berbagai varian untuk Toko, Bengkel, Koperasi, Distributor, dan Industri." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .offline-hero {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      padding: 9rem 5% 6rem;
+      text-align: center;
+      color: white;
+    }
+
+    .offline-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .search-container {
+      max-width: 600px;
+      margin: -2rem auto 4rem;
+      padding: 0 5%;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-box {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .search-box i {
+      color: #94a3b8;
+    }
+
+    .trial-info-section {
+      padding: 4rem 5% 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .trial-card {
+      background: linear-gradient(to right, #eff6ff, #ffffff);
+      padding: 2.5rem;
+      border-radius: 30px;
+      border-left: 6px solid var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    .trial-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    .trial-text h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
+
+    .btn-generate-key {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+      transition: all 0.3s;
+    }
+
+    .btn-generate-key:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 3rem 5% 6rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .app-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+      border: 1px solid #f1f5f9;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .app-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+      border-color: rgba(37, 99, 235, 0.2);
+    }
+
+    .app-icon {
+      width: 50px;
+      height: 50px;
+      background: #eff6ff;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .app-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+      text-transform: capitalize;
+    }
+
+    .app-tag {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      background: #f1f5f9;
+      border-radius: 6px;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--primary-color);
+      color: white;
+      padding: 0.9rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .btn-download:hover {
+      background: #1d4ed8;
+      gap: 15px;
+    }
+
+    .steps-section {
+      background: #f8fafc;
+      padding: 6rem 5%;
+      text-align: center;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 4rem auto 0;
+    }
+
+    .step-item {
+      position: relative;
+    }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin: 0 auto 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .trial-card>div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      .login-col {
+        border-left: none !important;
+        padding-left: 0 !important;
+        padding-top: 2rem;
+        border-top: 1px solid #f1f5f9;
+      }
+
+      .offline-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .download-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .trial-info-section {
+        padding: 2rem 5% 1rem;
+      }
+
+      .trial-card {
+        padding: 1.5rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="../index.html" class="navbar-brand">
+          <span class="brand-text"><i class="fas fa-wallet"></i>kasiraulia</span>
+        </a>
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="nav-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html#home">Beranda</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produk <i class="fas fa-chevron-down"
+                style="font-size: 0.7rem;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="kasir-online.html">Kasir Online</a></li>
+              <li><a href="kasir-offline.html" class="active">Kasir Offline</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#harga">Harga</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="../index.html#kontak-form">Kontak</a></li>
+          <li><a href="https://www.youtube.com/@auliasoftchannel3554/playlists" target="_blank">Tutorial</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="offline-hero">
+    <div class="container">
+      <h1>Dapatkan Versi Offline</h1>
+      <p>Solusi desktop handal tanpa ketergantungan internet. Download trial 30 hari sekarang.</p>
+      <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <a href="https://wa.me/6281241945881" target="_blank" 
+           style="display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); transition: all 0.3s;">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <div class="search-container">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="appSearch" placeholder="Cari varian aplikasi (Toko, Bengkel, Koperasi...)"
+        onkeyup="filterApps()" />
+    </div>
+  </div>
+
+  <!-- Unified Info Card -->
+  <div class="trial-info-section">
+    <div class="trial-card" style="display: block; padding: 2.5rem; background: #fff; border: 1px solid #e2e8f0; ">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+
+        <!-- Activation Column -->
+        <div class="activation-col">
+          <h4
+            style="font-weight: 800; color: #1e293b; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-key" style="color: var(--primary-color);"></i> Aktivasi Trial
+          </h4>
+          <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem;">Dapatkan akses penuh 30 hari secara
+            gratis dengan membuat Product Key di bawah ini:</p>
+          <a href="https://license.auliasoft.com/generate" target="_blank" class="btn-generate-key"
+            style="margin-top: 0; width: 100%; justify-content: center;">
+            <i class="fas fa-magic"></i> Generate Product Key
+          </a>
+        </div>
+
+        <!-- Login Column -->
+        <div class="login-col" style="border-left: 1px solid #f1f5f9; padding-left: 3rem;">
+          <h4
+            style="font-weight: 800; color: #1e293b; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-user-lock" style="color: #f59e0b;"></i> Login Default
+          </h4>
+          <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">Gunakan akun berikut untuk masuk ke
+            aplikasi setelah berhasil diinstal:</p>
+          <div style="display: flex; gap: 15px;">
+            <div
+              style="background: #f8fafc; padding: 0.7rem 1.2rem; border-radius: 10px; border: 1px solid #edf2f7; flex: 1;">
+              <span
+                style="font-size: 0.65rem; color: #94a3b8; display: block; text-transform: uppercase;">Jabatan</span>
+              <strong style="color: #1e293b; font-size: 0.95rem;">ADMIN</strong>
+            </div>
+            <div
+              style="background: #f8fafc; padding: 0.7rem 1.2rem; border-radius: 10px; border: 1px solid #edf2f7; flex: 1;">
+              <span
+                style="font-size: 0.65rem; color: #94a3b8; display: block; text-transform: uppercase;">Password</span>
+              <strong style="color: #1e293b; font-size: 0.95rem;">ADMIN</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- ZIP Password Notice -->
+    <div
+      style="margin-top: 1.5rem; background: #fff1f2; padding: 1rem 1.5rem; border-radius: 12px; border: 1px solid #fecdd3; display: flex; align-items: center; gap: 12px;">
+      <i class="fas fa-unlock-alt" style="color: #e11d48; font-size: 1.2rem;"></i>
+      <p style="font-size: 0.9rem; color: #9f1239; margin: 0;">Password Ekstrak ZIP: <strong
+          style="font-family: monospace; font-size: 1.1rem;">aulia</strong> (Gunakan aplikasi WinRAR atau 7-Zip)</p>
+    </div>
+
+  </div>
+
+  <!-- App Grid -->
+  <div class="download-grid" id="appGrid">
+
+    <!-- Item 1 -->
+    <div class="app-card" data-name="APLIKASI KOPERASI UNIT JASA">
+      <div>
+        <div class="app-icon"><i class="fas fa-handshake"></i></div>
+        <span class="app-tag">Aplikasi Koperasi Unit Jasa</span>
+        <h4>Manajemen Koperasi Jasa</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Sistem terpadu untuk koperasi penyedia
+          layanan jasa dan keanggotaan.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1tAPQVqHR0BtV1nldxutxncgjCAqxUSH1?hl=ID" class="btn-download"
+        target="_blank"><i class="fas fa-cloud-download-alt"></i>Download Installer</a>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="app-card" data-name="APLIKASI UNIT BENGKEL MOTOR">
+      <div>
+        <div class="app-icon"><i class="fas fa-motorcycle"></i></div>
+        <span class="app-tag">Aplikasi Unit Bengkel Motor</span>
+        <h4>Bengkel Motor Pro</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Kelola sparepart, antrean service, dan
+          histori kendaraan pelanggan.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1xEJeQxHOhvH6E5bpwwW6u6yIyB_Fqsj7?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="app-card" data-name="APLIKASI UNIT DISTRIBUTOR">
+      <div>
+        <div class="app-icon"><i class="fas fa-truck-moving"></i></div>
+        <span class="app-tag">Aplikasi Unit Distributor</span>
+        <h4>Sistem Distributor</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Pantau rantai pasok, stok gudang besar,
+          dan piutang agen.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1FHY_aGgRSouPhnOfgcgKMBw8IPh60ect?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="app-card" data-name="APLIKASI UNIT KACAMATA">
+      <div>
+        <div class="app-icon"><i class="fas fa-glasses"></i></div>
+        <span class="app-tag">Aplikasi Unit Kacamata</span>
+        <h4>Optik & Toko Kacamata</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Khusus untuk resep lensa, frame, dan
+          manajemen pelanggan optik.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/15MXv9gC8_kprBRX0xn_e__DAJoOfOW3_?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="app-card" data-name="APLIKASI UNIT KANTIN TOKO">
+      <div>
+        <div class="app-icon"><i class="fas fa-utensils"></i></div>
+        <span class="app-tag">Aplikasi Unit Kantin Toko</span>
+        <h4>Kantin & Kios Retail</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Transaksi cepat dan ringkas untuk kantin
+          perusahaan atau sekolah.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/14TMjdgSRMtP4fjMfr7X5fiR80k0NUpYS?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="app-card" data-name="APLIKASI UNIT KOPERASI KARYAWAN SEKTOR TOKO">
+      <div>
+        <div class="app-icon"><i class="fas fa-users-gear"></i></div>
+        <span class="app-tag">Koperasi Karyawan (Toko)</span>
+        <h4>Kopkar Sektor Toko</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Manajemen ritel khusus untuk koperasi
+          karyawan perusahaan.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1Y1NJXtuDl8J0z-ae2ViaWfNhZ-9EAEiz?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="app-card" data-name="APLIKASI UNIT KOPERASI KONSUMEN SEKTOR RILL TOKO">
+      <div>
+        <div class="app-icon"><i class="fas fa-basket-shopping"></i></div>
+        <span class="app-tag">Koperasi Konsumen (Rill)</span>
+        <h4>Kopkon Sektor Rill</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Sistem kasir profesional untuk unit usaha
+          rill koperasi.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1yFncwO07XasWQ9PuHKbuqY964s2TConI?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="app-card" data-name="APLIKASI UNIT KOPKON MULTI JENIS PRODUK SEKTOR RILL TOKO">
+      <div>
+        <div class="app-icon"><i class="fas fa-boxes-stacked"></i></div>
+        <span class="app-tag">Kopkon Multi Produk</span>
+        <h4>Kopkon Multi Jenis</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Kelola berbagai jenis produk dalam satu
+          unit usaha koperasi.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/14oeZiENrFQXFp_CvdAniretpHDVNFT6o?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="app-card" data-name="APLIKASI UNIT PENCATATAN JURNAL KEUANGAN">
+      <div>
+        <div class="app-icon"><i class="fas fa-book-journal-whills"></i></div>
+        <span class="app-tag">Pencatatan Jurnal Keuangan</span>
+        <h4>Accounting & Jurnal</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Fokus pada pembukuan, neraca, dan laporan
+          keuangan murni.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/126NkAK11Jl3F0skMW24X5mjYct-EcoLK?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 10 -->
+    <div class="app-card" data-name="APLIKASI UNIT PRODUKSI INDUSTRI">
+      <div>
+        <div class="app-icon"><i class="fas fa-industry"></i></div>
+        <span class="app-tag">Unit Produksi Industri</span>
+        <h4>Manufaktur & Produksi</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Lacak bahan baku, proses produksi, hingga
+          barang jadi.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/195zZrOZepIxvIO4_flfIY2dIBukJG0sT?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 11 -->
+    <div class="app-card" data-name="APLIKASI UNIT TOKO BIASA MINIMARKET">
+      <div>
+        <div class="app-icon"><i class="fas fa-store-alt"></i></div>
+        <span class="app-tag">Toko Biasa Minimarket</span>
+        <h4>Minimarket & Retail</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Varian standar paling populer untuk toko
+          kelontong modern.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1R-btBN6gnxKMhiEHrVzT95hqw0BXMHGw?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 12 -->
+    <div class="app-card" data-name="APLIKASI UNIT TOKO WAASERDA KOPERASI">
+      <div>
+        <div class="app-icon"><i class="fas fa-cart-flatbed"></i></div>
+        <span class="app-tag">Toko Waserda Koperasi</span>
+        <h4>Waserda Koperasi</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Sistem kasir khusus untuk unit usaha
+          Waserda Koperasi.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1kGXt0MwznlNOfk9mIueGoJKQa_9-DbyQ?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 13 -->
+    <div class="app-card" data-name="APLIKASI UNIT USP KONVENSIONAL">
+      <div>
+        <div class="app-icon"><i class="fas fa-vault"></i></div>
+        <span class="app-tag">USP Konvensional</span>
+        <h4>Simpan Pinjam Konven</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Sistem akuntansi untuk Unit Simpan Pinjam
+          koperasi.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1NUBdg7-AX_qUwdbTsl-ttvmEUiaMQ5hS?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+    <!-- Item 14 -->
+    <div class="app-card" data-name="APLIKASI UNIT USPPS SYARIAH">
+      <div>
+        <div class="app-icon"><i class="fas fa-kaaba"></i></div>
+        <span class="app-tag">USPPS Syariah</span>
+        <h4>Simpan Pinjam Syariah</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem;">Sistem keuangan berbasis syariah (BMT)
+          dengan akad Islami.</p>
+      </div>
+      <a href="https://drive.google.com/drive/folders/1NFd7VN06oDd5kruDwIQBySIjBR6J9rq9?hl=ID" target="_blank"
+        class="btn-download"><i class="fas fa-cloud-download-alt"></i> Download Installer</a>
+    </div>
+
+  </div>
+
+  <!-- Steps -->
+  <section class="steps-section">
+    <div class="container">
+      <h2 class="section-title">Cara Mulai Trial 30 Hari</h2>
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h4>Download & Pindahkan</h4>
+          <p style="font-size: 0.9rem; color: #64748b;">Download installer (ZIP), lalu <strong>pindahkan file</strong>
+            ke dalam <strong>Local Disk (D:)</strong>.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h4>Ekstrak & Instalasi</h4>
+          <p style="font-size: 0.9rem; color: #64748b;">Ekstrak file menggunakan password: <strong
+              style="color: var(--primary-color);">aulia</strong>. Jalankan instalasi tetap di <strong>D:\</strong>.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h4>Aktivasi Trial</h4>
+          <p style="font-size: 0.9rem; color: #64748b;">Buka aplikasi, pilih "Aktivasi", lalu klik tombol verifikasi
+            masuk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #0f172a; padding: 4rem 5%; color: white; text-align: center;">
+    <p>&copy; 2026 PT Mitra Aulia Indonesia. All Rights Reserved.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    function filterApps() {
+      const input = document.getElementById('appSearch');
+      const filter = input.value.toLowerCase();
+      const grid = document.getElementById('appGrid');
+      const cards = grid.getElementsByClassName('app-card');
+
+      for (let i = 0; i < cards.length; i++) {
+        const name = cards[i].getAttribute('data-name');
+        if (name.toLowerCase().indexOf(filter) > -1) {
+          cards[i].style.display = "";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

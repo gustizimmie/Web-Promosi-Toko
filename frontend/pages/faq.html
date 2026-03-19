@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Pertanyaan Umum | kasiraulia Auliasoft</title>
+  <meta name="description"
+    content="Temukan jawaban atas pertanyaan umum seputar aplikasi kasir kasiraulia dari Auliasoft. Panduan lengkap paket lisensi, fitur cloud, pembayaran, dan dukungan teknis." />
+  <meta name="keywords"
+    content="faq kasir, pertanyaan aplikasi kasir, help kasiraulia, panduan auliasoft, lisensi kasir, cloud pos" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* ===== FAQ PAGE SPECIFIC STYLES ===== */
+    .faq-page-hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      padding: 8rem 5% 5rem;
+      text-align: center;
+      color: white;
+    }
+
+    .faq-page-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .faq-page-hero p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .faq-search-bar {
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .faq-search-bar input {
+      width: 100%;
+      padding: 1rem 1.5rem 1rem 3.2rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-search-bar i {
+      position: absolute;
+      left: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+    }
+
+    .faq-page-body {
+      background: var(--bg-light);
+      padding: 5rem 5%;
+    }
+
+    .faq-page-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-category {
+      margin-bottom: 3.5rem;
+    }
+
+    .faq-category-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .faq-category-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e2e8f0;
+    }
+
+    .faq-cta {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: white;
+      padding: 4rem 5%;
+      text-align: center;
+    }
+
+    .faq-cta h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .faq-cta p {
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .faq-cta .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .faq-cta .btn-wa:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 30px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Hide items when filtering */
+    .faq-accordion details.hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .faq-page-hero {
+        padding: 6rem 5% 3rem;
+      }
+
+      .faq-page-body {
+        padding: 3rem 5%;
+      }
+
+      .faq-accordion details {
+        padding: 1rem;
+        border-radius: 14px;
+      }
+
+      .faq-accordion summary {
+        font-size: 0.9rem;
+      }
+
+      .faq-accordion p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="../index.html" class="navbar-brand">
+          <span class="brand-text"><i class="fas fa-wallet"></i>kasiraulia</span>
+        </a>
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="nav-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html#home">Beranda</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produk <i class="fas fa-chevron-down"
+                style="font-size: 0.7rem;"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="kasir-online.html">Kasir Online</a></li>
+              <li><a href="kasir-offline.html">Kasir Offline</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#fitur">Fitur</a></li>
+          <li><a href="../index.html#harga">Harga</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="../index.html#kontak-form">Kontak</a></li>
+          <li><a href="https://panduan.auliasoft.com/" target="_blank">Tutorial</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FAQ Hero -->
+  <div class="faq-page-hero">
+    <p class="section-subtitle" style="color: rgba(255,255,255,0.7); margin-bottom: 0.5rem;">Pusat Bantuan</p>
+    <h1>Pertanyaan Umum (FAQ)</h1>
+    <p>Temukan jawaban cepat atas semua pertanyaan Anda tentang aplikasi kasir kasiraulia.</p>
+    <div class="faq-search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" id="faq-search" placeholder="Cari pertanyaan..." />
+    </div>
+  </div>
+
+  <!-- FAQ Page Body -->
+  <section class="faq-page-body">
+    <div class="faq-page-container">
+
+      <!-- Kategori: Paket & Harga -->
+      <div class="faq-category">
+        <p class="faq-category-title"><i class="fas fa-tag"></i> Paket &amp; Harga</p>
+        <div class="faq-accordion">
+          <details>
+            <summary>
+              Apakah ada biaya bulanan untuk Paket Lisensi?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Tidak ada. Paket Lisensi (TKO-1 hingga TKO-5) adalah sistem "Sekali Bayar" untuk lisensi selamanya.
+              Anda hanya perlu membayar biaya tambahan jika ingin berlangganan layanan Cloud Add-on tahunan.</p>
+          </details>
+          <details>
+            <summary>
+              Apa perbedaan TKO-1 dan TKO-2?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>TKO-1 dikhususkan untuk UMKM mikro di satu wilayah (Desa/Kelurahan) dengan batasan maksimal 500 item
+              barang. Sementara TKO-2 tidak memiliki batasan jumlah item barang dan mencakup dukungan gratis selama 18
+              bulan.</p>
+          </details>
+          <details>
+            <summary>
+              Apa yang dimaksud dengan Cloud Add-on pada TKO-5?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>TKO-5 memungkinkan database offline Anda terintegrasi ke dashboard web. Owner bisa memantau laporan dari
+              HP melalui layanan cloud tahunan:<br><br>
+              • <strong>Dashboard Web HP Owner</strong>: Rp 300.000 / Tahun<br>
+              • <strong>E-Kasir, E-Sales, E-Order, E-Beli</strong>: Rp 600.000 / Tahun
+            </p>
+          </details>
+          <details>
+            <summary>
+              Apa perbedaan Paket Lisensi (TKO 1-5) dan Paket Cloud (TKO 6-7)?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Paket Lisensi (TKO 1-5) adalah bayar sekali, aplikasi berjalan di komputer lokal atau jaringan LAN Anda.
+              Paket Cloud (TKO 6-7) adalah sistem sewa bulanan dimana aplikasi sepenuhnya berbasis web dan bisa diakses
+              dari mana saja menggunakan HP, laptop, atau tablet dengan koneksi internet.</p>
+          </details>
+          <details>
+            <summary>
+              Apakah bisa upgrade paket di kemudian hari?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Ya, Anda bisa melakukan upgrade paket kapan saja. Hubungi tim kami via WhatsApp untuk informasi biaya
+              upgrade dari paket Anda saat ini ke paket yang lebih tinggi.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- Kategori: Teknis & Operasional -->
+      <div class="faq-category">
+        <p class="faq-category-title"><i class="fas fa-gear"></i> Teknis &amp; Operasional</p>
+        <div class="faq-accordion">
+          <details>
+            <summary>
+              Apakah aplikasi bisa berjalan tanpa koneksi internet?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Ya, untuk paket Lisensi Offline/LAN (TKO 1-5), aplikasi berjalan sepenuhnya secara lokal. Internet
+              hanya dibutuhkan saat aktivasi pertama kali atau jika Anda menggunakan fitur Cloud Add-on.</p>
+          </details>
+          <details>
+            <summary>
+              Berapa komputer yang bisa menggunakan satu lisensi?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>TKO-1 hingga TKO-3 adalah lisensi untuk 1 komputer. TKO-4 dan TKO-5 mendukung jaringan LAN dengan multi
+              komputer dalam satu lokasi (jaringan lokal yang sama).</p>
+          </details>
+          <details>
+            <summary>
+              Apakah data saya aman jika komputer rusak?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Untuk paket Lisensi Offline, data tersimpan di server lokal Anda. Kami sangat menyarankan untuk melakukan
+              backup data secara rutin. Untuk paket Cloud (TKO 6-7), data tersimpan aman di server cloud kami dengan
+              enkripsi dan backup otomatis.</p>
+          </details>
+          <details>
+            <summary>
+              Bagaimana cara instalasi aplikasi setelah pembelian?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Setelah pembayaran dikonfirmasi, tim kami akan menghubungi Anda untuk proses instalasi dan aktivasi,
+              baik secara remote (via TeamViewer) maupun kunjungan langsung untuk area tertentu. Proses instalasi
+              biasanya membutuhkan waktu 30-60 menit.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- Kategori: Support & Garansi -->
+      <div class="faq-category">
+        <p class="faq-category-title"><i class="fas fa-headset"></i> Support &amp; Garansi</p>
+        <div class="faq-accordion">
+          <details>
+            <summary>
+              Berapa lama masa support gratis yang diberikan?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Paket TKO-2 hingga TKO-5 mendapatkan support gratis selama 18 bulan sejak tanggal aktivasi. Setelah itu,
+              Anda bisa memperpanjang support dengan biaya yang sangat terjangkau.</p>
+          </details>
+          <details>
+            <summary>
+              Bagaimana cara menghubungi tim support?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Anda bisa menghubungi kami melalui WhatsApp di nomor <strong>0815-2281-8662</strong> atau email ke
+              <strong>pt.mitra.aulia.indonesia@gmail.com</strong>. Tim kami siap membantu Anda pada hari kerja
+              (Senin-Sabtu, pukul 08.00-17.00 WIB).
+            </p>
+          </details>
+          <details>
+            <summary>
+              Apakah bisa menjadi reseller aplikasi kasiraulia?
+              <i class="fas fa-chevron-down"></i>
+            </summary>
+            <p>Ya! Pengguna TKO-1 (Paket Starter Desa) secara otomatis bersedia menjadi reseller dan lokasi studi
+              banding aplikasi auliasoft. Untuk paket reseller lainnya, silakan hubungi kami untuk mendiskusikan
+              kerjasama yang saling menguntungkan.</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ CTA -->
+  <div class="faq-cta">
+    <h2>Tidak menemukan jawaban yang Anda cari?</h2>
+    <p>Tim kami siap membantu Anda secara langsung. Hubungi kami sekarang!</p>
+    <a href="https://wa.me/6281241945881" target="_blank" class="btn-wa">
+      <i class="fab fa-whatsapp"></i> Chat WhatsApp Sekarang
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer id="kontak">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4 style="color: white; font-weight: 800; font-size: 1.5rem;">kasiraulia</h4>
+        <p>Solusi aplikasi kasir dan software toko modern untuk kemajuan UMKM Indonesia.</p>
+        <div class="social-icons" style="margin-top: 1.5rem;">
+          <a href="https://www.instagram.com/auliasoft/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@auliasoftchannel3554"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Hukum</h4>
+        <ul class="footer-links">
+          <li><a href="#">Kebijakan Privasi</a></li>
+          <li><a href="#">Syarat dan Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Lainnya</h4>
+        <ul class="footer-links">
+          <li><a href="#">Jadi Reseller</a></li>
+          <li><a href="../index.html#kontak-form">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak Kami</h4>
+        <p><i class="fas fa-phone"></i> 0815-2281-8662</p>
+        <p><i class="fas fa-envelope"></i>pt.mitra.aulia.indonesia@gmail.com</p>
+        <p><i class="fas fa-location-dot"></i> Indonesia</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Copyright 2026 PT Mitra Aulia Indonesia. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    // FAQ Search Filter
+    const searchInput = document.getElementById('faq-search');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      const allDetails = document.querySelectorAll('.faq-accordion details');
+      allDetails.forEach(detail => {
+        const text = detail.textContent.toLowerCase();
+        if (query === '' || text.includes(query)) {
+          detail.classList.remove('hidden');
+        } else {
+          detail.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
