@@ -2575,3 +2575,159 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+/* ==========================================================================
+   PK CATEGORIES IMPROVEMENTS
+   ========================================================================== */
+
+/* Comparison Table (Competitors) */
+.comparison-container {
+  max-width: 1000px;
+  margin: 4rem auto 0;
+  overflow-x: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 600px;
+}
+
+.comp-table th, .comp-table td {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.comp-table th {
+  background: #f8fafc;
+  font-weight: 800;
+  color: #1e293b;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.comp-table th:first-child, .comp-table td:first-child {
+  text-align: left;
+  font-weight: 700;
+  background: #fff;
+  position: sticky;
+  left: 0;
+  z-index: 10;
+}
+
+.active-col {
+  background: rgba(37, 99, 235, 0.03) !important;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.icon-check { color: #10b981; font-size: 1.2rem; }
+.icon-x { color: #ef4444; font-size: 1.2rem; }
+
+/* Hardware Grid (Complementary Products) */
+.hw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+}
+
+.hw-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 24px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid #f1f5f9;
+}
+
+.hw-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: var(--primary-color);
+}
+
+.hw-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--bg-blue-light);
+  color: var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+/* Roadmap (Product Roadmap) */
+.roadmap-container {
+  max-width: 900px;
+  margin: 4rem auto 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.roadmap-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.roadmap-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.roadmap-item::before {
+  content: '';
+  position: absolute;
+  left: -2.35rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.roadmap-date {
+  font-weight: 800;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.roadmap-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+.roadmap-content h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.roadmap-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
